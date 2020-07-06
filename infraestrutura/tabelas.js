@@ -22,7 +22,7 @@ class Tabelas {
 
     criarPet() {
         const query =
-            'CREATE TABLE IF NOT EXISTS pets(id int NOT NULL AUTO_INCREMENT, nome varchar(50), imagem varchar(200), PRIMARY KEY (id))'
+            'CREATE TABLE IF NOT EXISTS pets(id int NOT NULL AUTO_INCREMENT, nome varchar(50), imagens varchar(200), PRIMARY KEY (id))'
 
         this.conexao.query(query, erro => {
             if(erro){
@@ -34,4 +34,4 @@ class Tabelas {
     }
 }
 
-module.exports = new Tabelas
+module.exports = new Tabelas()

@@ -31,4 +31,10 @@ module.exports = app => {
 
         Atendimento.deleta(id, res)
     })
+
+    app.post('/atendimentos', (req, res) => {
+        const atendimento = req.body
+
+        Atendimento.adiciona(atendimento, res)
+    })
 }
