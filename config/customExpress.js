@@ -3,15 +3,16 @@ const  consign =  require('consign')
 const bodyParser = require('body-parser')
 
 module.exports = () => {
-    const app = express()
+ const app = express()
 
-    app.use(bodyParser.urlencoded({extended: true}))
+ app.use(bodyParser.json())
+ app.use(bodyParser.urlencoded({ extended: true }))
 
-    consign()
-        .include('controllers')
-        .into(app)
+ consign()
+   .include('controllers')
+   .into(app)
 
-    return app
+ return app
 }
 
 
